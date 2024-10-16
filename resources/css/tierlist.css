@@ -1,0 +1,431 @@
+/*Font used for fancy accents -- REPLACE with your own!*/
+@font-face {
+    font-family: neato; /*Internal name of the font you'll use for this stylesheet.*/
+    src: url("../fonts/neato.otf"); /*Put the url of the font on your site here. DO NOT HOTLINK.*/
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 0.95em;
+    font-family: "Liberation Mono", "Source Code Pro", "Courier New", monospace;
+    background: linear-gradient(rgb(0,7,28,0.99), rgb(0,7,28,0)), url("../images/stars.gif") repeat;
+    background-size: 300px;
+    }
+    
+  a {
+    color: #c1cdf1; 
+    }
+    
+  /*Increased spacing to compensate for current font - may want to change if you use something else.*/
+  p {
+    line-height: 150%;
+    }
+
+  p.center {
+    text-align: center;
+  }
+    
+  /*Set font for headings.*/
+  h1, h2, h3 {
+    text-align:center;
+    font-family: neato, serif;
+    letter-spacing: 0.175em;
+    word-spacing: 0.2em;
+    }
+
+  /*Make lowercase headers bigger, since this font's a little harder to read.*/
+  h1 {
+    font-size: 2.325em;
+    }  
+  
+  /*Make h2 and h3 in ALLCAPS.*/
+  h2, h3 {
+    text-transform: uppercase;
+    }
+    
+  /*Change color when bold or italic.*/
+  b {
+    color: #aae6ff;
+    }
+    
+  i {
+    color: #cdf0ff;
+    }
+    
+  hr {
+    border: 0;
+    background: linear-gradient(rgb(0,0,0,0), rgb(255,255,255,1), rgb(0,0,0,0));
+    height:1px;
+    margin: 2em 1em;
+    }
+    
+  blockquote {
+    font-style:italic;
+    border-left: 1px solid #aae6ff;
+    background: rgb(170,230,255,0.15);
+    padding: 5px 20px;
+    }
+  
+  .italic {
+    font-style: italic;
+  }
+  
+  /***
+  
+  NOTE: This stylesheet uses elements instead of div classes in a few places (nav1, nav2). 
+  If you want to use them as classes, put "." in front of all the custom element names in the stylesheet here.
+  For example: nav1 .navlink {} would be .nav1 .navlink {} instead.
+  
+  ***/
+  
+  /*Content all goes in here.*/
+  .wrapper {
+    display: block;
+    margin: 0 auto;
+    width: 1800px;
+    position:relative;
+    }
+    
+  /*This is where the pretty header image goes! Replace the url with the location of your own.*/
+  .header {
+    display: flex;
+    background: linear-gradient(rgb(0,7,28,0.99), rgb(0,7,28,0)), url("../images/banner.jpg") no-repeat; /*REPLACE ME!*/
+    background-position: center;
+    background-size: 1800px auto;
+    height:200px;
+    top: 0;
+    }
+    
+  /*Miscellanous fancy styling for the title inside the header area.*/
+  .header h1 {
+    display: flex;
+    font-size: 3.25em;
+    padding: 200px;
+    justify-content: center;
+    }
+
+  .header img {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+  /*Nav1 is for the link buttons on the side.*/
+  nav1 {
+    display: block;
+    position: absolute;
+    float: right;
+    margin-left: 1800px;
+    top: 100px;
+    }
+    
+  nav1 .navlink {
+    display: block;
+    margin: 15px 0px;
+    padding: 5px 5px 5px 2px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #333;
+    font-family: neato;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-radius: 0 5px 5px 0px;
+    }
+
+  nav1 img {
+    max-width: 100%;
+    }
+    
+  nav1 .navlink a {
+    color: #fff;
+    text-decoration: none;
+    }
+  
+  nav1 .navlink:hover, nav1 .navlink:focus-within {
+    background: #555;
+    padding-left:5px;
+    transition:ease 0.5s; /*So the tab button appears to 'move' instead of instantly changing and popping outwards.*/
+    }
+    
+  /*Nav2 is for the links directly below the header.*/
+  nav2 {
+    display: block;
+    width: 100%;
+    background: #444e6f;
+    text-align: center;
+    }
+    
+  nav2 .navlink {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 2px;
+    font-size: 1.5em;
+    text-decoration:none;
+    font-family: "Symbola", "Palatino Linotype", Garamond, serif;
+    font-weight:bold;
+    }
+    
+  nav2 .navlink a {
+    color: #fff;
+    text-shadow: 0 0 2px #c3cdea; 
+    }
+    
+  nav2 .navlink a:hover, nav2 .navlink a:focus {
+    text-shadow: 0 0 3px #dae1f5;
+    transition: ease 5s;
+    }
+    
+  /*Main page content goes in here. (Replace the image with your own footer image.)
+    The rgb color in the linear-gradient here should match your actual main div background color, so the image
+    appears to 'fade in' from the image to solid background. */
+  .main {
+    display: block;
+    margin: 0;
+    position: relative;
+    /*In order: gradient overlay (opacity going from 1 to 0.875), actual background color, footer image*/
+    background: linear-gradient(rgb(16,24,50,1), rgb(16,24,50,0.875)), #101832 url("../images/akko.webp") no-repeat;
+    background-size: 1800px auto;
+    background-position:bottom center;
+    }
+
+  /*Inside div. I don't remember why this was a div and nothing else, but it is. 
+    If you do change that, remember to add display:block; to the element first.*/
+  .inner { 
+    display: flex;
+    padding: 1px 20px 20px 20px; /*The 1px is to prevent paragraph margin overflow from mucking up the background. CSS is weird sometimes.*/
+    }
+    
+  /*Prevent image overflow.*/
+  .inner img {
+    max-width: 100%;
+    height:auto;
+    }
+    
+  /*Footer with small text at the bottom of the page.*/
+  .footer {
+    display: block;
+    padding: 0.75em 20px;
+    text-align: center;
+    font-size: 0.85em;
+    background: #444e6f;
+    line-height: 150%;
+    }
+    
+  .footer a {
+    color: #dfdfdf;
+    }
+    
+  /* Art Gallery Stuff */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: baseline;
+}
+
+.gallery_multi {
+  display: flex;
+  align-items: baseline;
+  font-size: 1em;
+  }
+
+.gallery_content_lg {
+  max-width: 20%;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.gallery_content_sm {
+  padding: 0 10px;
+  text-align: center;
+}
+
+.gallery_content_sm img {
+  max-width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery p {
+  text-align: center;
+  font-size: 1em;
+}
+
+.spoiler {
+  filter: blur(10px);
+}
+
+.spoiler:hover {
+  filter: blur(0px);
+}
+
+.hiddenlink a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.hiddenlink a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Dividers for tier list */
+
+.tierlist {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tier_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+}
+
+.tier_categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: auto;
+  border: #333;
+  border-width: 4px 4px 4px 6px;
+  border-style: solid;
+}
+
+.tier_categories p {
+  color: #000000;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.tier_categories.s {
+  background-color: #ee8683;
+  text-align: center;
+}
+
+.tier_categories.a {
+  background-color: #f4c188;
+  text-align: center;
+}
+
+.tier_categories.p {
+  background-color: #8c009e;
+  text-align: center;
+}
+
+.tier_categories.b {
+  background-color: #ffff91;
+  text-align: center;
+}
+
+.tier_categories.c {
+  background-color: #a0fc8f;
+  text-align: center;
+}
+
+.tier_categories img {
+  display: flex;
+  width: 110px;
+  height: 110px;
+  border: #333;
+  border-width: 4px 6px 4px 2px;
+  border-style: solid;
+}
+
+.tier {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #1b1b1b;
+  border: #333;
+  border-width: 4px 6px 4px 2px;
+  border-style: solid;
+  width: 100%;
+}
+
+.tier img{
+  max-height: 150px;
+}
+    
+  /***
+  
+  For narrower screens that can't handle the full version of the page.
+  
+  ***/
+  
+  /*For desktop screens that are too narrow for the default width, keep the default layout, but with a narrower column.*/
+  @media(max-width:1050px) {
+    .wrapper {
+      width: 600px;
+      }
+    nav1 {
+      margin-left:600px;
+      }
+    }
+  
+  /*For smallest screens, switch to percentage-based width, and move the side tab buttons to the space under the header as centered buttons.*/
+  @media(max-width:1800px) {
+    .wrapper {
+      width: 80%;
+      }
+    nav1 {
+      position:static;
+      margin-left:0;
+      margin: 0 auto;
+      width: 100%;
+      text-align:center;
+      }
+    nav1 .navlink {
+      display: inline-block;
+      border-radius: 15px 5px;
+      margin: 15px 0;
+      padding: 5px 15px 10px 15px;
+      width: 50px 50px;
+      }
+      
+    nav1 .navlink:hover {
+      padding-left: 15px;
+      }
+
+      nav1 img {
+        max-width: 100%;
+        }
+
+      .header h1 {
+        display: flex;
+        font-size: 2.25em;
+        padding: 200px;
+        justify-content: center;          
+      }
+
+      .gallery p {
+        text-align: center;
+        font-size: .75em;
+      }
+
+    }
+  
+  /*If on mobile, maximize the space available by increasing width to 95%.*/
+  @media(orientation:portrait) {
+    .wrapper {
+      width: 95%;
+      }
+    }
+
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+
+  

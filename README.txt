@@ -1,1 +1,0 @@
-Images that I need for custom discord background

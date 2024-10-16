@@ -1,0 +1,34 @@
+[
+    {
+        "img": "https://cdn.myanimelist.net/images/anime/1804/95033.jpg",
+        "link": "https://myanimelist.net/anime/2167/Clannad?q=clannad&cat=anime",
+        "name": "Clannad",
+        "description": "Description for Clannad",
+        "tags": "comedy, romance, drama",
+        "rating": 10
+    },
+    {
+        "img": "https://via.placeholder.com/50",
+        "link": "https://example.com/charlie",
+        "name": "Bob",
+        "description": "Description for Bob",
+        "tags": "tag2, tag3",
+        "rating": 3.2
+    },
+    {
+        "img": "https://via.placeholder.com/50",
+        "link": "https://example.com/charlie",
+        "name": "Charlie",
+        "description": "Description for Charlie",
+        "tags": "tag1, tag3",
+        "rating": 5.0
+    },
+    {
+        "img": "https://via.placeholder.com/50",
+        "link": "https://example.com/charlie",
+        "name": "Krill",
+        "description": "Description for Charlie",
+        "tags": "tag1, tag3",
+        "rating": 5.0
+    }
+]
