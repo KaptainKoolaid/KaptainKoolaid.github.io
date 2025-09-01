@@ -135,6 +135,27 @@ For example: nav1 .navlink {} would be .nav1 .navlink {} instead.
   margin-right: auto;
   }
 
+.header_subpage {
+  display: flex;
+  background: linear-gradient(rgb(0,7,28,0.99), rgb(0,7,28,0)), url("../images/banner.jpg") no-repeat; /*REPLACE ME!*/
+  background-position: center;
+  background-size: 1100px auto;
+  height:200px;
+  top: 0;
+  }
+
+.header_subpage h1 {
+  display: flex;
+  font-size: 3.25em;
+  padding: 100px;
+  justify-content: center;
+  }
+
+.header_subpage img {
+  margin-left: auto;
+  margin-right: auto;
+  }
+
 .header_vocal {
   display: flex;
   background: linear-gradient(rgb(0,7,28,0.99), rgb(0,7,28,0)), url("../images/miku_chair.jpg") no-repeat; /*REPLACE ME!*/
