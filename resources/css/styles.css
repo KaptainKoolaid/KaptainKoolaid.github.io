@@ -308,6 +308,10 @@ nav2 .navlink a:hover, nav2 .navlink a:focus {
 .inner img {
   max-width: 100%;
   height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
   }
   
 /*Footer with small text at the bottom of the page.*/
