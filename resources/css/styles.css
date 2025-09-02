@@ -30,6 +30,14 @@ body.fate {
     background-image: linear-gradient(#3d281c, #be8f743b), url(../images/gears.png);
     background-repeat: repeat;
 }
+
+body.miku_shrine {
+    background-color: #101832;
+    background-image: linear-gradient(rgb(0,7,28,0.99), rgb(0,7,28,0)), url(../images/miku_pattern.gif);
+    background-size: 10%;
+    background-repeat: repeat;
+    color:#55d1d0;
+}
   
 a {
   color: #c1cdf1; 
