@@ -69,7 +69,14 @@ h1 {
 h2, h3 {
   text-transform: uppercase;
   }
-  
+
+/*Columns for lists*/
+ul {
+        column-count:4;
+        -moz-column-count:4;
+        -webkit-column-count:4;
+    }
+
 /*Change color when bold or italic.*/
 b {
   color: #aae6ff;
